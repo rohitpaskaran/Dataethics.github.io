@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional data analysis and custom software development services for businesses of all sizes. Transform your data into actionable insights with our expert solutions.">
+    <meta name="keywords" content="data analysis, business intelligence, custom software development, data automation, business analytics">
+    <title>Data Analysis & Custom Software Solutions | Transform Your Business</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a237e;
+            --light-navy: #283593;
+            --teal: #5682f0;
+            --light-teal: #4db6ac;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--navy);
+            line-height: 1.6;
+        }
+        .navbar {
+            background-color: var(--white);
+            padding: 0.8rem 2rem;
+            border-bottom: 2px solid var(--teal);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(26, 35, 126, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container {
+            width: 50px;
+            height: 50px;
+            margin: 0;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .company-name span {
+            color: var(--teal);
+        }
+
+        .logo {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--light-navy) 100%);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            color: var(--white);
+        }
+
+        .header h1 {
+            font-size: 3.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-weight: 300;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .services {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--white);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 2px solid var(--navy);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card h3 {
+            font-weight: 600;
+            margin: 1rem 0;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            font-weight: 300;
+            font-size: 1rem;
+            color: #4a4a4a;
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            letter-spacing: -0.5px;
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .stat-card p {
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--light-navy) 100%);
+            position: relative;
+            overflow: hidden;
+            color: var(--white);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--teal);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            border-top: 2px solid var(--teal);
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
+
+
+        .impact-section {
+            padding: 6rem 2rem;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+
+        .impact-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .impact-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1.5rem;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .impact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .impact-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .impact-description {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        .section-title-container {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #666;
+            max-width: 700px;
+            margin: 1rem auto 0;
+        }
+
+        .container {
+                display: flex;
+                justify-content: center; /* Centers horizontally */
+                align-items: center;    /* Centers vertically */
+                height: 100px;          /* Set height if necessary */
+            }
+
+            .service-icon {
+                width: 250px;
+                height: 250px;
+                object-fit: contain;
+               }
+        @media (max-width: 768px) {
+            .impact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+            }
+
+            .stat-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <nav class="navbar">
+            <div class="brand-container">
+                <div class="logo-container">
+                    <img src="Logo.png" alt="DataForge Logo" class="logo">
+                </div>
+                <a href="#" class="company-name">Data<span>ethics</span></a>
+            </div>
+        </nav>
+
+    <header class="header">
+        <h1>Transform Your Business with Data</h1>
+        <p>Unlock powerful insights with cutting-edge analytics and custom software solutions</p>
+    </header>
+
+    <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card" data-aos="fade-up">
+                <img src="data.jpg" alt="Data Analysis" class="service-icon">
+                <h3>Data Analysis</h3>
+                <p>Transform raw data into actionable insights. We help businesses make data-driven decisions through advanced analytics and visualization.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="Customs.jpg" alt="Custom Software" class="service-icon">
+                <h3>Custom Software Development</h3>
+                <p>Automate your analysis processes with tailored software solutions designed specifically for your business needs.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="business.jpg" alt="Business Intelligence" class="service-icon">
+                <h3>Business Intelligence</h3>
+                <p>Get comprehensive insights into your business performance with our advanced BI solutions and dashboards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-section">
+        <div class="section-title-container">
+            <h2 class="section-title">Our Impact</h2>
+            <p class="section-subtitle">Transforming businesses through data-driven solutions and innovative software development</p>
+        </div>
+        <div class="impact-grid">
+            <div class="impact-card" data-aos="fade-up">
+                <div class="impact-image">
+                    <img src="ec.jpg" alt="E-commerce Analytics">
+                </div>
+                <h3 class="impact-title">E-commerce Revolution</h3>
+                <p class="impact-description">Helped an online retailer increase sales by 150% through advanced customer behavior analysis and automated inventory management. Our solutions led to improved customer satisfaction and reduced operational costs.</p>
+            </div>
+
+            <div class="impact-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="impact-image">
+                    <img src="sf.jpg" alt="Healthcare Analytics">
+                </div>
+                <h3 class="impact-title">Software Innovation</h3>
+                <p class="impact-description">I developed a powerful software solution that revolutionized the way a company performed its data analysis. Previously, analyzing over 10,000 data points was a manual process that took 1-2 days to complete. With the automated system I created, the same analysis could be accomplished in just 10 minutes. This not only saved significant time but also improved accuracy and efficiency, enabling the company to focus on strategic decision-making and achieve faster results.                </p>
+            </div>
+
+            <div class="impact-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="impact-image">
+                    <img src="IOT.jpg" alt="Manufacturing Optimization">
+                </div>
+                <h3 class="impact-title">Manufacturing Excellence</h3>
+                <p class="impact-description">Implemented IoT-based manufacturing analytics that reduced production downtime by 60% and improved quality control accuracy to 99.9%. The system processes real-time data from over 1,000 sensors.</p>
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+        <h2 class="section-title">Ready to Transform Your Business?</h2>
+        <p style="margin: 1rem 0 2rem; position: relative; z-index: 2;">Let's discuss how we can help you leverage your data for better decision-making</p>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </section>
+
+    <footer>
+        <p>© 2024 Dataethics. All rights reserved.</p>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
